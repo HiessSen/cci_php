@@ -1,0 +1,75 @@
+Exercice 1 : Accès direct aux éléments d'un tableau associatif
+Créez un tableau associatif contenant des informations sur un livre :
+Titre : "1984"
+Auteur : "George Orwell"
+Année de publication : 1949
+Genre : "Dystopie"
+Tâches :
+Accédez directement à chaque clé du tableau et affichez ses valeurs (sans boucle).
+Formatez les informations sous forme de texte comme suit :
+"Le livre '1984' écrit par George Orwell appartient au genre Dystopie et a été publié en 1949."
+
+
+
+
+Exercice 2 : Création et modification d'un tableau indexé
+Créez un tableau contenant les noms de trois fruits : 
+
+['pomme','fraise','banane'].
+Remplacez directement la valeur "Banane" par "Orange".
+Affichez les trois éléments individuellement sur la page.
+ 
+
+
+
+Exercice 3 : Tableaux imbriqués (multidimensionnels)
+Créez un tableau contenant des informations sur deux employés. Chaque employé a les détails suivants :
+Nom
+Âge
+Poste
+Tâches :
+Affichez les informations de chaque employé sans utiliser de boucle, en accédant aux indices et clés directement.
+Formatez les informations comme suit :
+"Alice, âgée de 30 ans, est Développeuse."
+"Marc, âgé de 45 ans, est Designer."
+ 
+
+
+
+Exercice 4 : Envoi d'un fichier simple avec $_FILES
+Créez un formulaire HTML permettant de télécharger un fichier avec la méthode POST.
+Tâches :
+Vérifiez si un fichier a été envoyé ($_FILES).
+Affichez le nom du fichier, son type MIME, et sa taille directement (sans boucle).
+Astuce : Accédez directement à :
+$_FILES['file']['name']
+$_FILES['file]['tmp_name']
+$_FILES['file]['size']
+ 
+
+
+
+Exercice 5 : Validation et déplacement d'un fichier
+Vérifiez que le fichier envoyé par le formulaire ne dépasse pas 1 Mo ($_FILES['file']['size']).
+Vérifiez que le fichier est au format JPEG ($_FILES['file']['type']).
+Si les conditions sont remplies, déplacez le fichier dans un dossier upload. Sinon, affichez un message d'erreur.
+ 
+
+
+
+Exercice 6 : Gestion de fichiers multiples
+Créez un formulaire HTML permettant de télécharger trois fichiers.
+Tâches :
+Vérifiez que trois fichiers ont été envoyés via $_FILES.
+Affichez le nom et la taille des trois fichiers en accédant directement aux indices dans $_FILES.
+ 
+
+
+
+Exercice 7 : Fusion de deux tableaux
+Créez deux tableaux simples :
+$tab1 = ['rouge','vert','bleue']
+$tab2 = ['jaune','violet','orange']
+Fusionnez-les en un seul tableau avec array_merge().
+Affichez chaque couleur du tableau fusionné individuellement, en accédant directement aux indices ($tabfusion[0], $tabfusion[1], etc.).
+ 

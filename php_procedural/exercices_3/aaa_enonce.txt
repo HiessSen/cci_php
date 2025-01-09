@@ -1,0 +1,46 @@
+Exercice 1
+A l'aide des boucles parcourir le tableau multi dimension et afficher l'ensemble des informations.
+Afficher uniquement le prénom et le nom des personnes ayant moins de 40 ans (voir fonction sur les tableaux PHP sur php.net)
+
+
+Exercice 2
+A partir du formulaire ci-joint
+Explorer les connaissances sélectionné
+Afficher le nombre de connaissances cochées
+
+
+Exercice 3
+A l'aide d'une boucle while
+Effectuer un compte à rebours de 30 à 0. Une fois à 0 afficher un message "décollage"
+(le premier qui fait une boucle infinie doit ramener des chocolatines  )
+
+
+Exercice 4
+Créer un formulaire de contact avec les champs:
+Nom
+Prénom
+Email
+Sujet
+Message
+En PHP dans un fichier texte:
+Créer un fichier dont le nom sera prenom-nom.txt
+Enregistrer les informations du formulaire dans le fichier
+
+
+Exercice 5
+Reprendre le formulaire de l'exercice 4 puis en PHP
+Créer un fichier csv contact.csv
+Enregistrer les informations saisies dans le formulaire (sans écrasé les informations déjà présente dans le fichier)
+
+
+Exercice 6
+Créer un formulaire d'inscription avec les champs
+Nom
+Prénom
+Email
+Mot de passe
+Age
+En PHP:
+Hasher le mot de passe
+Enregistrer l'ensemble des informations dans un fichier CSV nommé membres.csv (attention le fichier CSV doit s'alimenter au fur et à mesure des inscriptions).
+ 

@@ -1,0 +1,70 @@
+Exercice 1 : Récupérer des données via GET
+Objectif : Créer une page qui affiche un message personnalisé en fonction des paramètres passés dans l'URL.
+Crée un fichier bonjour.php.
+Utilise la superglobale $_GET pour récupérer un paramètre nom dans l'URL.
+Affiche un message du type :
+"Bonjour, [nom] ! Bienvenue sur notre site."
+Si le paramètre nom n'est pas défini, affiche :
+"Bonjour, visiteur anonyme !"
+Exemple d'URL :
+
+bonjour.php?nom=Pascal
+Résultat attendu :
+Bonjour, Pascal ! Bienvenue sur notre site.
+
+
+
+
+Exercice 2 : Formulaire avec POST
+Objectif : Envoyer un formulaire pour traiter les données avec $_POST.
+Crée un fichier formulaire.php avec un formulaire contenant :
+Un champ texte pour le nom (name="nom").
+Un champ mot de passe (name="password").
+Un bouton de soumission.
+À la soumission du formulaire, affiche un message comme :
+"Bienvenue, [nom] ! Votre mot de passe est sécurisé."
+Si les champs sont vides, affiche un message d'erreur.
+
+
+
+
+Exercice 3 : Compteur de visites avec $_SESSION
+Objectif : Suivre le nombre de visites d'un utilisateur avec les sessions.
+Crée un fichier compteur.php.
+Démarre une session avec session_start().
+Utilise $_SESSION pour compter et afficher le nombre de visites de l'utilisateur sur la page.
+Exemple d'affichage :
+Première visite : "C'est votre première visite !"
+Deuxième visite : "Vous avez visité cette page 2 fois."
+ 
+
+
+
+Exercice 4 : Gestion des cookies
+Objectif : Créer et afficher des cookies.
+Crée un fichier cookies.php.
+Lorsque l'utilisateur charge la page pour la première fois, crée un cookie appelé prenom avec une valeur (par exemple, "David").
+Lors des chargements suivants, affiche :
+"Bonjour, David ! Content de vous revoir."
+Si le cookie est absent, affiche :
+"Bonjour, nouvel utilisateur !"
+
+
+
+
+Exercice formulaire inscription
+Création du formulaire d'inscription :
+Crée un fichier inscription.php.
+Ajoute un formulaire contenant :
+Un champ texte pour le nom d'utilisateur (name="username").
+Un champ mot de passe (name="password").
+Un bouton de soumission.
+Traitement des données du formulaire :
+Vérifie si le formulaire est soumis.
+Valide les données :
+Le nom d'utilisateur doit avoir au moins 3 caractères (utiliser la fonction strlen).
+Le mot de passe doit avoir au moins 6 caractères (utiliser la fonction strlen).
+Si les données sont valides :
+Hash le mot de passe avec la fonction password_hash (utilise l'algorithme par défaut PASSWORD_DEFAULT).
+Crée une session pour l'utilisateur et un cookie pour mémoriser son nom d'utilisateur.
+Créer une page informations.php et afficher la valeur de la session et du cookie.

@@ -1,0 +1,9 @@
+<footer>
+    <h2>Footer</h2>
+    <ul>
+        <li>Ilan</li>
+        <li>Senouci</li>
+        <li>Copyright</li>
+        <?=$date;?>
+    </ul>
+</footer>

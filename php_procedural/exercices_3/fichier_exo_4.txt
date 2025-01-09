@@ -1,0 +1,1 @@
+Ce texte a été écrit en PHP via la fonction fwrite()\nIlan - Senouci - ilansenouci@gmail.com - dz - dzCe texte a été écrit en PHP via la fonction fwrite()\nIlan - Senouci - ilansenouci@gmail.com - Sujet de toute beauté - Message absolument splendide !!!!!!!!!!!! 
