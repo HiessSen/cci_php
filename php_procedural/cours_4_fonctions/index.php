@@ -16,5 +16,6 @@ $token = genererToken();
 </head>
 <body>
 <a href="page.php?token=<?=$token;?>">Acceder à ma page</a>
+<a href="password.php">Mot de passe</a>
 </body>
 </html>

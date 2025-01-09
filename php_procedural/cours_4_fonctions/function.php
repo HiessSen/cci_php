@@ -55,24 +55,24 @@ function genererMotDePasse($param=array())
     // J'initialise un tableau vide pour le mot de passe
     $password = [];
     // J'enregistre le nombre de caractères présents dans le mot de passe
-    $nbCarac = (int) $param['speciaux'] + $param['maj'] + $param['chiffres'];
+    $nbCarac = (int) $param['speciaux'] + $param['majuscules'] + $param['chiffres'];
     // Je vérifie si $nbCarac est bien inferieur ou égal à la longueur
     if ($nbCarac <= $param['longueur'])
     {
         // Je fais une boucle pour sélectionner les caractères spéciaux
-        for ($i = 0; $i < $param; $i++)
+        for ($i = 0; $i < $param['speciaux']; $i++)
         {
             // Je vais ajouter au tableau un caractère spécial au hasard
             $password[] = $speciaux[rand(0,(count($speciaux) - 1))];
         }
         // Je fais une boucle pour sélectionner les majuscules
-        for ($i = 0; $i < $param; $i++)
+        for ($i = 0; $i < $param['majuscules']; $i++)
         {
             // Je vais ajouter au tableau une majuscule au hasard
             $password[] = $majuscules[rand(0,count($majuscules) - 1)];
         }
         // Je fais une boucle pour sélectionner les chiffres
-        for ($i = 0; $i < $param; $i++)
+        for ($i = 0; $i < $param['chiffres']; $i++)
         {
             // Je vais ajouter au tableau un chiffre au hasard
             $password[] = $chiffres[rand(0,count($chiffres) - 1)];
