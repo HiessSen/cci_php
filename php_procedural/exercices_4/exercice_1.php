@@ -45,3 +45,7 @@ function remplacerCaracteres($string){
     return $stringFinale;
 }
 echo remplacerCaracteres($password2);
+
+
+
+
