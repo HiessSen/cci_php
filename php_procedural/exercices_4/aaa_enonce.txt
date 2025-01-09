@@ -1,0 +1,18 @@
+Exercice 1
+Créer une fonction qui remplace les caractères spéciaux et les accents par une lettre. La fonction doit aussi remplacer les espaces par des -
+
+
+Exercice 2
+Créer une fonction multiplication qui prends un chiffre en arguement.
+La fonction doit retourner la table de multiplication
+
+
+Exercice 3
+Ecrire une fonction qui génère des phrases aléatoires
+ 
+
+Exercice 4
+Créer une fonction PHP qui génère une liste déroulante de formulaire.
+La fonction doit prendre 2 arguments:
+Le tableau des paramètres (name, class etc..)
+Le tableau des valeurs (option 1, option 2, option 3)
