@@ -12,7 +12,6 @@ function genererToken()
     $token = '';
     // Je génère une clé aléatoire avec une boucle for avec une longueur comprise entre 16 et 30
     for ($i = 0; $i < rand(16, 30); $i++) {
-
         $token .= $tableau[rand(0, $longueur - 1)];
     }
     // Je hashe le token
@@ -50,7 +49,7 @@ function genererMotDePasse($param=array())
     $speciaux = '&é"(-è_çà)=°~#{[|`\^@]}/*-+?,;.:§!%ù¨^';
     // Je transforme les chaines de caractère en tableau
     $chaine = mb_str_split($chaine);
-    $maj = mb_str_split($majuscule);
+    $majuscules = mb_str_split($majuscules);
     $chiffres = mb_str_split($chiffres);
     $speciaux = mb_str_split($speciaux);
     // J'initialise un tableau vide pour le mot de passe
@@ -60,6 +59,21 @@ function genererMotDePasse($param=array())
     // Je vérifie si $nbCarac est bien inferieur ou égal à la longueur
     if ($nbCarac <= $param['longueur'])
     {
-        fore
+        // Je fais une boucle pour sélectionner les caractères
+        for ($i = 0; $i < $param; $i++)
+        {
+            // Je vais ajouter au tableau un caractère spécial au hasard
+            $password[] = $speciaux[rand(0,(count($speciaux) - 1))];
+        }
+        for ($i = 0; $i < $param; $i++)
+        {
+            // Je vais ajouter au tableau une majuscule au hasard
+            $password[] = $majuscules[rand(0,count($majuscules) - 1)];
+        }
+        for ($i = 0; $i < $param; $i++)
+        {
+            // Je vais ajouter au tableau un chiffre au hasard
+            $password[] = $chiffres[rand(0,count($chiffres) - 1)];
+        }
     }
 }
