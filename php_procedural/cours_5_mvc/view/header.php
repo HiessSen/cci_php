@@ -12,7 +12,9 @@
         <h1>Bienvenue sur la page <u><?=$titrePage;?></u></h1>
         <nav>
             <ul>
-                <li><a href="">Accueil</a></li>
+                <li><a href="index.php">Accueil</a></li>
+                <li><a href="index.php?route=inscription">Inscription</a></li>
+                <li><a href="index.php?route=connection">Connection</a></li>
             </ul>
         </nav>
     </header>

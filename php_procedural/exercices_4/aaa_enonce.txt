@@ -9,7 +9,7 @@ La fonction doit retourner la table de multiplication
 
 Exercice 3
 Ecrire une fonction qui génère des phrases aléatoires
- 
+
 
 Exercice 4
 Créer une fonction PHP qui génère une liste déroulante de formulaire.

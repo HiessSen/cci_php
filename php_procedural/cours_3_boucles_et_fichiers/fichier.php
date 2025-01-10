@@ -3,7 +3,7 @@
 $fichier = fopen("fichier.txt", "a");
 //J'écris dans ce fichier avec la fonction fwrite()
 fwrite($fichier, 'Ce texte a été écrit en PHP via la fonction fwrite()');
-// Je ferle ensuite le fichier par soucis de performance
+// Je ferme ensuite le fichier par soucis de performance
 $fichier2 = file_get_contents("fichier2.txt");
 echo $fichier2;
 

@@ -30,7 +30,7 @@
                     header('location:upload/' . $nouveauNom);
                 }
             }else{
-                echo '<h1>ERREUR !!!!! ' . $verifExtension . ' n\'est pas une extension autorisée et Hugo est un Nazi</h1>';
+                echo '<h1>ERREUR !!!!! ' . $verifExtension . ' n\'est pas une extension autorisée</h1>';
             }
         }
     }
