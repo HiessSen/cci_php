@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Je verifie que le formulaire a bien été soumis
 if(isset($_POST["submit"]))
 {
