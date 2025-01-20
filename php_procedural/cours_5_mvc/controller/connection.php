@@ -9,8 +9,9 @@ if(isset($_POST["submit"]))
         // Je fais appel au model pour connecter l'utilisateur
         if(connecterUtilisateur($_POST["email"], $_POST["password"]))
         {
+            $token = genererToken();
             // Je redirige l'utilisateur vers la page connection
-            header('Location: index.php?route=membre');
+            header('Location: index.php?route=membre&token=.$token');
             // Je quitte ce script
             exit();
         }
