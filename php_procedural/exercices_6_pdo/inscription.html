@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Inscription</title>
+</head>
+<body>
+<form action="inscription.php" method="post">
+    <div>
+        <label for="nom">Nom</label>
+        <input type="text" name="nom" id="nom">
+    </div>
+    <div>
+        <label for="prenom">Prenom</label>
+        <input type="text" name="prenom" id="prenom">
+    </div>
+    <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email">
+    </div>
+    <div>
+        <label for="password">Mot de passe</label>
+        <input type="password" name="password" id="password">
+    </div>
+    <div>
+        <label for="actif">Actif</label>
+        <input type="radio" name="actif" id="oui" value="oui">
+        <label for="actif">Inactif</label>
+        <input type="radio" name="actif" id="non" value="non">
+    </div>
+    <div>
+        <label for="niveau">Niveau</label>
+        <select name="niveau" id="niveau">
+            <option value="admin">Admin</option>
+            <option value="moderateur">Moderateur</option>
+            <option value="utilisateur">Utilisateur</option>
+        </select>
+    </div>
+    <button type="submit" name="submit">Soumettre</button>
+</form>
+</body>
+</html>

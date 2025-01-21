@@ -85,7 +85,7 @@ function genererMotDePasse($param=array())
         }
         // Je mélange les éléments du tableau avec password
         shuffle($password);
-        // Je transforme le tableau en chaine de caractère avec inplde();
+        // Je transforme le tableau en chaine de caractère avec inplode();
         $password = implode('', $password);
         // Je retourne le mot de passe
         return $password;
