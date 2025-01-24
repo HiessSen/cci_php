@@ -2,7 +2,7 @@
 // Je demarre la sessions
 session_start();
 // Je génère une clé aléatoire
-$captcha = substr(str_shuffle('azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN0123456789'),0,8);
+$captcha = substr(str_shuffle('azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN0123456789'),0,4);
 // J'enregistre le captcha dans la session
 $_SESSION['captcha'] = $captcha;
 // On va définir la largeur et la hauteur de l'image
@@ -25,9 +25,10 @@ for ($i = 0; $i < 200; $i++) {
     imagesetpixel($image, rand(0,$width), rand(0,$height), $line_color);
 }
 // J'écris mon captcha dans l'image avec imagestring()
-imagestring($image, 5, rand(10,80), rand(10,20), $captcha, $text_color);
+imagestring($image, 8, rand(10,80), rand(10,20), $captcha, $text_color);
 // J'envoie un header pour indiquer que c'est une image
 header('Content-type: image/png');
 // Je génère l'image avec la fonction imagepng()
 imagepng($image);
 imagedestroy($image);
+

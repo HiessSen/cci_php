@@ -2,16 +2,44 @@
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
-// Je demarre la session
-session_start();
-// Je vérifie si le champ captcha est égal à la session
-if($_SESSION['captcha'] != $_POST['captcha'])
+require_once 'db.php';
+function genererToken()
 {
-    echo 'Suicidage';
-    exit();
+    // Je crée une chaine de caractère pour le token
+    $chaine = 'azertyuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN0123456789&é"(-è_çà/*-+=*!§:/;.,?<>¤€`]°+}@^\|[{#~';
+    // Je transforme la chaine en tableau pour des raisons d'encodage;
+    $tableau = mb_str_split($chaine);
+    // Je calcule la longueur de la chaine de caractère avec strlen()
+    $longueur = count($tableau);
+    // J'initialise une variable Token vide
+    $token = '';
+    // Je génère une clé aléatoire avec une boucle for avec une longueur comprise entre 16 et 30
+    for ($i = 0; $i < rand(16, 30); $i++) {
+        $token .= $tableau[rand(0, $longueur - 1)];
+    }
+    // Je hashe le token
+    $token = md5(sha1($token));
+    // J'enregistre mon token dans une session
+    $_SESSION['token'] = $token;
+    // Une fois le token terminé, je le retourne
+    return $token;
 }
-// Je verifie si le formulaire a été soumis
-if(isset($_POST['submit']))
+$token = genererToken();
+$date = date("Y-m-d H:i:s");
+
+// Je prépare une requête SQL d'insertion
+$requete = $dbh->prepare('
+INSERT INTO users
+    (nom, prenom, email, date, cle)
+VALUES
+    (:nom, :prenom, :email, :date, :cle)');
+$requete->bindValue(':nom', $_POST['nom'], PDO::PARAM_STR);
+$requete->bindValue(':prenom', $_POST['prenom'], PDO::PARAM_STR);
+$requete->bindValue(':email', $_POST['email'], PDO::PARAM_STR);
+$requete->bindValue(':date', $date, PDO::PARAM_STR);
+$requete->bindValue(':cle', $token, PDO::PARAM_STR);
+
+if($requete->execute())
 {
     if(!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['email']) && !empty($_POST['sujet']) && !empty($_POST['message']))
     {
@@ -33,9 +61,14 @@ if(isset($_POST['submit']))
             //Recipients
             $mail->setFrom('contact@dwwm2425.fr', strip_tags($_POST['prenom']). ' ' . strip_tags($_POST['nom']));
             $mail->addAddress('ilansenouci@gmail.com', 'Toujours Ilan SENOUCI');                                                    //Add a recipient
-            $mail->addAddress('imran.costanzo@campuscci18.fr', 'Salope salope salope');                                             //Name is optional
             $mail->addReplyTo(strip_tags($_POST['email']), strip_tags($_POST['prenom']). ' ' . strip_tags($_POST['nom']));
-            
+            // $mail->addCC(''); CC
+            // $mail->addBCC('bcc@example.com'); CCI
+
+            //Attachments
+            // $mail->addAttachment('/var/tmp/file.tar.gz');                        Add attachments
+            // $mail->addAttachment('/tmp/image.jpg', 'new.jpg');                   Optional name
+
             //Content
             $mail->isHTML(true);                                             //Set email format to HTML
             $mail->Subject = strip_tags($_POST['sujet']);
@@ -48,4 +81,36 @@ if(isset($_POST['submit']))
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
+else
+{
+    echo 'Erreur';
+};

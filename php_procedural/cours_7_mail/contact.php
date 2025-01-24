@@ -28,7 +28,13 @@
         <label for="message">Message</label>
         <textarea name="message"></textarea>
     </div>
+    <div>
+        <label for="captcha"></label>
+        <input type="text" name="captcha" >
+        <img src="captcha.php" alt="">
+    </div>
     <button name="submit" type="submit">Nique l'éducation nation nationale</button>
 </form>
+
 </body>
 </html>
