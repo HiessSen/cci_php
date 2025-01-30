@@ -7,6 +7,6 @@ $password2 = genererMotDePasse([
     'speciaux' => 8,
     'majuscules' => 8,
     'chiffres' => 5,
-    'FlorianEtTristan' => 'accroc au porn'
+    'FlorianEtTristan' => 'accro au porn'
 ]);
 echo $password2;
