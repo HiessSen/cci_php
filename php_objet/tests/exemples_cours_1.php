@@ -21,7 +21,7 @@ trait VehiculeRoulant {
         echo 'La ' . htmlspecialchars($this->marque) . ' ' . htmlspecialchars($this->gamme) . ' ' . htmlspecialchars($this->couleur) . ' est arrêtée.<br>';
     }
 }
-class Voiture {
+class VoitureTest {
     use VehiculeRoulant;
     private string $marque;
     private string $gamme;
@@ -66,8 +66,8 @@ class Voiture {
     }
 }
 // Instanciation de deux voitures
-$voiture1 = new Voiture("Toyota", "Corola", "SUV", "Rouge", 180, 5, 5);
-$voiture2 = new Voiture("Renault", "Clio", "Berline", "Bleu", 200, 4, 5);
+$voiture1 = new VoitureTest("Toyota", "Corola", "SUV", "Rouge", 180, 5, 5);
+$voiture2 = new VoitureTest("Renault", "Clio", "Berline", "Bleu", 200, 4, 5);
 // Utilisation des méthodes
 $voiture1->accelerer(50);
 $voiture1->freiner(20);
