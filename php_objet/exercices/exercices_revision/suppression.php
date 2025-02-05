@@ -1,13 +1,11 @@
 <?php
 require_once 'class.voitureManager.php';
-if (isset($_POST['ajouter'])) {
-    if (!empty($_POST['marque']) && !empty($_POST['modele']) && !empty($_POST['annee'])) {
+if (isset($_POST['supprimer'])) {
         $marque = $_POST['marque'];
         $modele = $_POST['modele'];
         $annee = $_POST['annee'];
         try {
-            $vehiculeAjoute = new VoitureManager($marque, $modele, $annee);
-            $vehiculeAjoute->ajouterVoiture($marque, $modele, $annee);
+            $vehiculeAjoute->ajouterVoiture($id);
             header('Location: class.voitureManager.php');
         } catch (Exception $e) {
             echo "Erreur d'insertion : " . $e->getMessage();

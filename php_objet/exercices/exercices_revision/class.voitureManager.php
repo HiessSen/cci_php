@@ -61,6 +61,20 @@ class VoitureManager extends Voiture{
             echo 'Erreur de connexion à la base de données: ';
         }
     }
+    public function supprimerVoiture(int $id): void {
+        try {
+            $sql = self::connexionBDD();
+            $requete = $sql->prepare('DELETE FROM voiture WHERE id = :id');
+            $requete->bindParam(':id', $id, PDO::PARAM_INT);
+            if ($requete->execute()) {
+                echo 'Véhicule supprimé !';
+            } else {
+                echo 'Erreur lors de l\'exécution de la requête';
+            }
+        } catch (PDOException $e) {
+            echo 'Erreur de connexion à la base de données: ' . $e->getMessage();
+        }
+    }
 }
 $voirToutesLesVoitures = new VoitureManager('Marque', 'Modèle', 2000);
 $voirToutesLesVoitures->getAllVoitures();
