@@ -1,7 +1,7 @@
 <?php
 require_once('database.php');
 class Voiture{
-    use BDDMaLegueue;
+    use BaseDeDonnees;
     private string $marque;
     private string $modele;
     private int $annee;

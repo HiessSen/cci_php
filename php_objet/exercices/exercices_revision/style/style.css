@@ -1,0 +1,22 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #cccccc;
+}
+div#voitures{
+    width: 50%;
+    background-color: #4caf50;
+}
+div#voitures div{
+    display: flex;
+    flex-wrap: wrap;
+}
+div#voitures div p{
+    width: 75%;
+}
+div#voitures div button{
+    width: 25%;
+}

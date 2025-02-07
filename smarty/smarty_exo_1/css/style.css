@@ -1,0 +1,9 @@
+div#container{
+    width: 90%;
+}
+div#article{
+    background-color: #9b9b9b;
+}
+div#commentaire{
+    background-color: #eeeeee;
+}

@@ -1,5 +1,5 @@
 <?php
-trait BDDMaLegueue
+trait BaseDeDonnees
 {
     public function connexionBDD(): PDO
     {

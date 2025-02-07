@@ -1,3 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/style.css">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+</html>
 <?php
 require_once 'class.voiture.php';
 class VoitureManager extends Voiture{
@@ -15,27 +28,13 @@ class VoitureManager extends Voiture{
                     if($requete->rowCount() > 0)
                     {
                         $resultat = $requete->fetchAll();
-                        $content = '<table>
-                        <thead>
-                        <tr>
-                            <th>ID</th>
-                            <th>Marque</th>
-                            <th>Modèle</th>
-                            <th>Année</th>
-                        </tr>
-                        </thead>
-                        <tbody>';
-                        foreach($resultat as $voiture)
-                        {
-                            $content .= '<tr><td>' . $voiture['id'] . '</td><td>' . $voiture['marque'] . '</td><td>' . $voiture['modele'] . '</td><td>' . $voiture['annee'] . '</td><td><button name="supprimer">Supprimer</button></button></td></tr> '.PHP_EOL;
-                        }
-                        $content .=  '</tbody>
-                        </table>';
-                        echo $content;
+                        $content = '';
+                        include_once 'afficherVoitures.php';
                     }
                     else
                     {
                         $content =  'Il n\'y a pas de voiture à afficher';
+                        echo $content;
                     }
                 }
             }
