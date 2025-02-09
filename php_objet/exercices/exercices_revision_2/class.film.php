@@ -1,11 +1,12 @@
 <?php
+require_once'class.database.php';
 class Film {
     private string $titre;
     private string $dateSortie;
-    private float $duree;
+    private int $duree;
     private string $genre;
-    private array $acteurs;
-    public function __construct(string $titre, string $dateSortie, float $duree, string $genre)
+    private array $acteurs = [];
+    public function __construct(string $titre, string $dateSortie, int $duree, string $genre)
     {
         $this->titre = $titre;
         $this->dateSortie = $dateSortie;
@@ -20,7 +21,7 @@ class Film {
     {
         return $this->dateSortie;
     }
-    public function getDuree() : float
+    public function getDuree() : int
     {
         return $this->duree;
     }

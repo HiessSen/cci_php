@@ -26,8 +26,6 @@ class Database {
     {
         return $this->pdo;
     }
-    private function __clone(){} // Cette methode privée et vide empeche le clonage
-    public function __wakeup(){} // Cette methode privée et vide empeche la deserialisation
+    private function __clone(){} // Cette methode privée et vide empêche le clonage
+    public function __wakeup(){} // Cette methode privée et vide empêche la deserialisation
 }
-
-

@@ -46,4 +46,18 @@ Créez une classe ActeurManager avec des méthodes similaires pour gérer les ac
 * supprimerFilm($id)
 
 Ajoutez dans l’un des managers (par exemple dans FilmManager) une méthode ajouterActeurAuFilm(filmId, acteurId) qui insère une relation dans la table film_acteur.
+
+## Exercice 6
+Créez un fichier index.php qui affiche la liste des films, avec la possibilité de :
+* Visualiser les détails d’un film (et la liste de ses acteurs).
+* Ajouter un nouveau film.
+* Modifier ou supprimer un film.
+
+Créez également un formulaire pour ajouter un acteur et pour associer un acteur à un film.  
+Mettez en place la logique de traitement des formulaires dans vos scripts (utilisez par exemple $_POST et redirigez avec header("Location: index.php") après traitement).
+
+## Exercice 7 (utilisation avancée)
+Implémentez une fonctionnalité de recherche qui permet de trouver des films par titre ou par genre.  
+Ajoutez la pagination pour la liste des films ou des acteurs si leur nombre devient important.  
+Implémentez une gestion d’erreurs et de validations (par exemple, vérifier que les dates sont valides, que les champs obligatoires sont remplis, etc.).  
  
